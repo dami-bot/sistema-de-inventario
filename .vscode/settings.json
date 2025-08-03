@@ -1,0 +1,29 @@
+{
+    "git.ignoreLimitWarning": true,
+    "editor.quickSuggestions": {
+        "strings": "off"
+    },
+    "tailwindCSS.codeActions": true,
+    "chat.agent.enabled": false,
+    "tailwindCSS.includeLanguages": {
+        "\".css": "Tailwind.css"
+    },
+    "tailwindCSS.emmetCompletions": true
+}
+
+/* {
+  "tailwindCSS.includeLanguages": {
+    "javascript": "javascript",
+    "javascriptreact": "javascript",
+    "typescript": "typescript",
+    "typescriptreact": "typescript"
+  },
+  "tailwindCSS.experimental.classRegex": [
+    "tw`([^`]*)",
+    "tw=\"([^\"]*)",
+    "tw={'([^'}]*)'}",
+    "className=\"([^\"]*)"
+    
+  ]
+}
+ */
