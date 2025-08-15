@@ -3,16 +3,11 @@
   "version": "1.0.0",
   "main": "main.js",
   "scripts": {
-    "build-backend": "cd backend && npm install && npm run build",
-    "electron": "electron main.js",
-    "package": "npm run build-backend && electron-packager . sistema-de-inventario --platform=win32 --arch=x64 --overwrite --icon=icon.ico --ignore=backend/src",
-    "build": "npm run build-backend && electron-packager . sistema-de-inventario --platform=win32 --arch=x64 --overwrite --ignore=backend/src",
-    "dist": "npm run build-backend && electron-builder"
+    "build-backend": "cd backend && npm install && npm run build"
   },
+    
   "devDependencies": {
-    "electron": "^30.5.1",
-    "electron-builder": "^26.0.12",
-    "electron-packager": "^17.1.2"
+    
   },
   "build": {
     "appId": "com.tuempresa.sistemainventario",
