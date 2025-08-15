@@ -1,0 +1,50 @@
+{
+  "name": "sistema-de-inventario",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "build-backend": "cd backend && npm install && npm run build",
+    "electron": "electron main.js",
+    "package": "npm run build-backend && electron-packager . sistema-de-inventario --platform=win32 --arch=x64 --overwrite --icon=icon.ico --ignore=backend/src",
+    "build": "npm run build-backend && electron-packager . sistema-de-inventario --platform=win32 --arch=x64 --overwrite --ignore=backend/src",
+    "dist": "npm run build-backend && electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^30.5.1",
+    "electron-builder": "^26.0.12",
+    "electron-packager": "^17.1.2"
+  },
+  "build": {
+    "appId": "com.tuempresa.sistemainventario",
+    "productName": "Sistema de Inventario",
+    "files": [
+      "main.js",
+      "frontend/.next/**/*",
+      "frontend/public/**/*",
+      "backend/**/*",
+      "node_modules/**/*",
+      "package.json"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    },
+    "extraResources": [
+      {
+        "from": "backend/dev.db",
+        "to": "dev.db"
+      }
+    ],
+    "win": {
+      "target": "nsis"
+    }
+  },
+  "dependencies": {
+    "@nestjs/common": "^11.1.6",
+    "@nestjs/core": "^11.1.6",
+    "node-thermal-printer": "^4.5.0",
+    "pdfkit": "^0.17.1",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.2",
+    "wait-on": "^8.0.4"
+  }
+}
